@@ -102,7 +102,7 @@ void correctQuestion(int score) {
 	printf("\n");
 	printLine();
 	printf("You are correct!\n");
-	printf("Your total score is $%s!\n", money);
+	printf("Your total money is $%s!\n", money);
 	printLine();
 
 	pause();
