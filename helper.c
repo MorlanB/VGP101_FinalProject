@@ -26,7 +26,7 @@ int getIntRange(char* prompt, int min, int max) {
 char* getString(char* prompt) {
     char* str = (char*) malloc(100);
     printf("%s: ", prompt);
-    scanf_s(" %[^\n]s", str, sizeof(str));
+    scanf_s(" %[^\n]s", str, 100);
     return str;
 }
 
