@@ -40,7 +40,7 @@ struct Question* getQuestions() {
 			"A philosophical pondering with a modern twist. Trees might be more tech-savvy than you think!",
 		// Question 9
 		"How many jellybeans can fit in your dreams?",
-			"An infinite amount", "The number is constantly changing", "Only if they're sugar-free", "Dreams don't have a capacity",
+			"An infinite amount", "The number is constantly changing", "Only if they're sugar-free", "7",
 			"This question is a sweet journey into the realm of dreamy confections!",
 		// Question 10
 		"How do you catch a time-traveling fish?",
