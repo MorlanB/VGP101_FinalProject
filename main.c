@@ -38,7 +38,7 @@ struct Question* selectQuestionSet(struct QuestionSet* questionSets) {
 	}
 	clearScreen();
 
-	return (questionSets != NULL) ? questionSets->questions : NULL;
+	return questionSets->questions;
 }
 
 void mainMenu(struct QuestionSet* questionSets) {
