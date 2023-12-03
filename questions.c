@@ -163,8 +163,19 @@ struct QuestionSet* convertToLinkedList(char* questionsAndAnswers[], char* name)
 }
 
 struct QuestionSet* getQuestions() {
-	struct QuestionSet* head = benjaminSet();
-	head->next = lucasSet();
-	head->next->next = NULL;
+	struct QuestionSet* sets[] = {
+		benjaminSet(),
+		lucasSet(),
+	};
+
+	struct QuestionSet* head = sets[0];
+	struct QuestionSet* current = head;
+
+	for (int i = 1; i < sizeof(sets)/sizeof(sets[0]); i++) {
+		current->next = sets[i];
+		current = current->next;
+	}
+	current->next = NULL;
+
 	return head;
 }

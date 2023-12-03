@@ -62,15 +62,7 @@ void editQuestion(struct Question* question, int questionNum) {
 	}
 }
 
-void editorMain(struct QuestionSet* questionSets) {
-	// Select set
-	printSets(questionSets);
-	int setNum = getIntRange("Select a set (press 0 to quit)", 0, 2);
-	if (setNum == 0) return;
-	struct Question* questions = selectSet(questionSets, setNum);
-	clearScreen();
-
-	// Start loop
+void editorMain(struct Question* questions) {
 	resetQuestionOrder(questions);
 	while (1) {
 		clearScreen();

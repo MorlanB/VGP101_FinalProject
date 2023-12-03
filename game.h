@@ -1,2 +1,2 @@
 #pragma once
-extern void gameMain(struct QuestionSet* questionSets);
+extern void gameMain(struct Question* question);

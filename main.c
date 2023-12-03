@@ -16,6 +16,34 @@ void title() {
 	printf("Created by: Benjamin, Haoxi, Lucas, Morlan, & Narda\n");
 }
 
+struct Question* selectQuestionSet(struct QuestionSet* questionSets) {
+	int sets = 2;
+
+	// Header
+	clearScreen();
+	printf("Question Sets\n");
+	printLine();
+	
+	// Print question sets
+	int totalSets = 0;
+	struct QuestionSet* current = questionSets;
+	while(current != NULL) {
+		printf("%d: %s\n", ++totalSets, current->creator);
+		current = current->next;
+	}
+	printLine();
+
+	// Select a set
+	int setNum = getIntRange("Select a set (press 0 to return to menu)", 0, totalSets);
+	if (setNum == 0) return NULL;
+	for(int i = 1; i < setNum; i++) {
+		questionSets = questionSets->next;
+	}
+	clearScreen();
+
+	return questionSets->questions;
+}
+
 void mainMenu(struct QuestionSet* questionSets) {
 	while (1) {
 		clearScreen();
@@ -29,14 +57,19 @@ void mainMenu(struct QuestionSet* questionSets) {
 
 		clearScreen();
 		if (menuChoice == 0) {
+			// We're done here
 			printLine();
 			printf("Thank you for playing!\n");
 			printLine();
 			pause();
-			break;
+			return;
 		}
-		else if (menuChoice == 1) gameMain(questionSets);
-		else editorMain(questionSets);
+
+		// Select a question set
+		struct Question* questions = selectQuestionSet(questionSets);
+		if (questions == NULL) continue;
+		if (menuChoice == 1) gameMain(questions);
+		else editorMain(questions);
 	}
 }
 
