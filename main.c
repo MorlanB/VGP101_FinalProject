@@ -37,11 +37,15 @@ struct Question* selectQuestionSet(struct QuestionSet* questionSets) {
 	int setNum = getIntRange("Select a set (press 0 to return to menu)", 0, totalSets);
 	if (setNum == 0) return NULL;
 	for(int i = 1; i < setNum; i++) {
+		if (questionSets == NULL) {
+			// This should never happen, but just in case
+			break;
+		}
 		questionSets = questionSets->next;
 	}
 	clearScreen();
 
-	return questionSets->questions;
+	return (questionSets != NULL) ? questionSets->questions : NULL;
 }
 
 void mainMenu(struct QuestionSet* questionSets) {

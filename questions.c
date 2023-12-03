@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "questions.h"
 
 struct QuestionSet* convertToLinkedList(char* questionsAndAnswers[], char* name);

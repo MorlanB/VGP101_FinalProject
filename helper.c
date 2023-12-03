@@ -76,19 +76,3 @@ void formatNumber(char* str, int num) {
     }
     str[strIndex] = '\0';
 }
-
-void printSets(struct QuestionSet* questionSets) {
-    clearScreen();
-    printf("Question Sets\n");
-    printLine();
-    printf("\n");
-
-    // Print question sets
-    struct QuestionSet* current = questionSets;
-    int setNum = 1;
-    while (current != NULL) {
-		printf("%d: %s's set\n", setNum++, current->creator);
-		current = current->next;
-	}
-    printLine();
-}

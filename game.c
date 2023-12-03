@@ -91,7 +91,12 @@ void endGame(char* message, int score) {
 	clearScreen();
 	printLine();
 	printf("%s\n", message);
-	printf("You have won $%s!\n", money);
+	if (score == 0) {
+		printf("You get nothing!\n");
+	}
+	else {
+		printf("You have won $%s!\n", money);
+	}
 	printLine();
 }
 
@@ -162,7 +167,7 @@ void gameMain(struct Question* question) {
 		// Check answer
 		if (choice == 0) {
 			// Quit
-			endGame("Thank you for playing", moneyPerRound[questionNumber]);
+			endGame("Thank you for playing!", moneyPerRound[questionNumber]);
 			break;
 		}
 		else if (choice >= 5) {
