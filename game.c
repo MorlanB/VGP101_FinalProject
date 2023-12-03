@@ -62,9 +62,9 @@ void askQuestion(struct Question* question, int questionNumber, int score, int h
 
 	// Print lifelines
 	printf("\nLifelines:\n");
-	printf("5. 50/50 (%s)\n", hasLifeline[FIFTY_FIFTY] == 1 ? "Available" : "Used");
-	printf("6. Phone a Friend (%s)\n", hasLifeline[PHONE_A_FRIEND] == 1 ? "Available" : "Used");
-	printf("7. Ask the Audience (%s)\n", hasLifeline[ASK_THE_AUDIENCE] == 1 ? "Available" : "Used");
+	printf("5: 50/50 (%s)\n", hasLifeline[FIFTY_FIFTY] == 1 ? "Available" : "Used");
+	printf("6: Phone a Friend (%s)\n", hasLifeline[PHONE_A_FRIEND] == 1 ? "Available" : "Used");
+	printf("7: Ask the Audience (%s)\n", hasLifeline[ASK_THE_AUDIENCE] == 1 ? "Available" : "Used");
 	printLine();
 }
 

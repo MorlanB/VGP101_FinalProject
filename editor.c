@@ -6,7 +6,7 @@
 void printQuestions(struct Question* questions) {
 	int questionNum = 1;
 	while(questions != NULL) {
-		printf("%d. %s\n", questionNum, questions->question);
+		printf("%d: %s\n", questionNum, questions->question);
 		questions = questions->next;
 		questionNum++;
 	}
@@ -31,12 +31,12 @@ void editQuestion(struct Question* question, int questionNum) {
 		printLine();
 
 		// Print the current question
-		printf("\n1. Question: %s\n", question->question);
-		printf("2. Answer: %s\n", question->choices[0]);
+		printf("\n1: Question: %s\n", question->question);
+		printf("2: Answer: %s\n", question->choices[0]);
 		for (int i = 1; i <= 3; i++) {
-			printf("%d. Wrong Answer %d: %s\n", i + 2, i, question->choices[i]);
+			printf("%d: Wrong Answer %d: %s\n", i + 2, i, question->choices[i]);
 		}
-		printf("6. Friend Hint: %s\n", question->phoneAFriend);
+		printf("6: Friend Hint: %s\n", question->phoneAFriend);
 		printLine();
 
 		// Ask the user what they want to edit

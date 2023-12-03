@@ -33,7 +33,7 @@ struct Question* getQuestions() {
 		// Question 7
 		"What's the airspeed velocity of an unladen swallow?",
 			"What do you mean? An African or European swallow?", "25 miles per hour", "50 miles per hour", "100 miles per hour",
-			"This question requires a bit of Monty Python knowledge and avian aerodynamics. It's a real challenge!"
+			"This question requires a bit of Monty Python knowledge and avian aerodynamics. It's a real challenge!",
 		// Question 8
 		"If a tree falls in a forest and no one is around to hear it, does it make a sound?",
 			"Yes", "No", "It sends a text message instead", "The forest is a silent disco",

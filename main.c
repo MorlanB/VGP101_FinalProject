@@ -22,8 +22,8 @@ void mainMenu(struct Question* questions) {
 		title();
 		printf("\nMain Menu\n");
 		printLine();
-		printf("1. Play the Game\n");
-		printf("2. Question Editor\n");
+		printf("1: Play the Game\n");
+		printf("2: Question Editor\n");
 		printLine();
 		int menuChoice = getIntRange("Select a mode (press 0 to quit)", 0, 2);
 
