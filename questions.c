@@ -60,7 +60,7 @@ struct Question* getQuestions() {
 			"This question takes you on a multidimensional journey in C. Can you spot the invalid declaration?",
 		// Question 14
 		"Consider the following C code: int z = 3 << 2 + 1; What's the value of z?",
-			"16", "14", "10", "20",
+			"24", "14", "10", "20",
 			"This bitwise question takes a left shift into a wacky numeric realm. Can you predict the result?",
 		// Question 15
 		"Why do C programmers prefer dark mode in their code editors?",
