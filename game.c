@@ -97,11 +97,11 @@ void endGame(char* message, int score) {
 
 void correctQuestion(int score) {
 	char money[10];
+	formatNumber(money, score);
 
 	printf("\n");
 	printLine();
 	printf("You are correct!\n");
-	formatNumber(money, score);
 	printf("Your total score is $%s!\n", money);
 	printLine();
 
@@ -110,6 +110,8 @@ void correctQuestion(int score) {
 
 void failQuestion(int guaranteedMoney) {
 	char money[10];
+	formatNumber(money, guaranteedMoney);
+
 	printf("\n");
 	printLine();
 	printf("YOU ARE WRONG!!! HAHAHAHAHAHAHA!\n");
@@ -117,7 +119,6 @@ void failQuestion(int guaranteedMoney) {
 		printf("ALL YOUR MONEY IS GONE!!! You get nothing!\n");
 	}
 	else {
-		formatNumber(money, guaranteedMoney);
 		printf("All you get is $%s!\n", money);
 	}
 	printf("Now go away!\n");
