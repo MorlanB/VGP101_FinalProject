@@ -24,6 +24,7 @@ void mainMenu(struct Question* questions) {
 		printLine();
 		printf("1. Play the Game\n");
 		printf("2. Question Editor\n");
+		printLine();
 		int menuChoice = getIntRange("Select a mode (press 0 to quit)", 0, 2);
 
 		clearScreen();
