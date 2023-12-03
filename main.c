@@ -17,9 +17,6 @@ void title() {
 }
 
 struct Question* selectQuestionSet(struct QuestionSet* questionSets) {
-	int sets = 2;
-
-	// Header
 	clearScreen();
 	printf("Question Sets\n");
 	printLine();
