@@ -30,6 +30,7 @@ void mainMenu(struct Question* questions) {
 			printLine();
 			printf("Thank you for playing!\n");
 			printLine();
+			pause();
 			break;
 		}
 		else if (menuChoice == 1) gameMain(questions);
