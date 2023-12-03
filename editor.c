@@ -38,7 +38,6 @@ void editQuestion(struct Question* question, int questionNum) {
 		}
 		printf("6. Friend Hint: %s\n", question->phoneAFriend);
 		printLine();
-		printf("");
 
 		// Ask the user what they want to edit
 		int choice = getIntRange("\nWhat would you like to edit (press 0 to exit)", 0, 6);
