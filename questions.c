@@ -52,7 +52,7 @@ struct QuestionSet* benjaminSet() {
 			"This ASCII-centric question adds a numeric twist to character manipulation in C. Can you decipher the output?",
 		// Question 12
 		"Consider the following C code: int x = 10; printf('%d', x++ + ++x); What's the value of x?",
-			"12", "13", "14", "Undefined behavior",
+			"22", "13", "14", "Undefined behavior",
 			"This incrementing question takes you on a wild ride through C code. Can you catch the final value of x?",
 		// Question 13
 		"Which of the following is a valid way to declare a multidimensional array in C?",
