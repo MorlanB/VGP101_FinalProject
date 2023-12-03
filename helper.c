@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "questions.h"
 
 // User Input
 int getInt(char* prompt) {
@@ -74,4 +75,28 @@ void formatNumber(char* str, int num) {
         str[strIndex - i - 1] = temp;
     }
     str[strIndex] = '\0';
+}
+
+struct Question* selectSet(struct QuestionSet* questionSets, int setNum) {
+	struct QuestionSet* current = questionSets;
+	for (int i = 1; i < setNum; i++) {
+		current = current->next;
+	}
+	return current->questions;
+}
+
+void printSets(struct QuestionSet* questionSets) {
+    clearScreen();
+    printf("Question Sets\n");
+    printLine();
+    printf("\n");
+
+    // Print question sets
+    struct QuestionSet* current = questionSets;
+    int setNum = 1;
+    while (current != NULL) {
+		printf("%d: %s's set\n", setNum++, current->creator);
+		current = current->next;
+	}
+    printLine();
 }

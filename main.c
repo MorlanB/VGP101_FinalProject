@@ -16,7 +16,7 @@ void title() {
 	printf("Created by: Benjamin, Haoxi, Lucas, Morlan, & Narda\n");
 }
 
-void mainMenu(struct Question* questions) {
+void mainMenu(struct QuestionSet* questionSets) {
 	while (1) {
 		clearScreen();
 		title();
@@ -35,8 +35,8 @@ void mainMenu(struct Question* questions) {
 			pause();
 			break;
 		}
-		else if (menuChoice == 1) gameMain(questions);
-		else editorMain(questions);
+		else if (menuChoice == 1) gameMain(questionSets);
+		else editorMain(questionSets);
 	}
 }
 

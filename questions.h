@@ -6,4 +6,9 @@ struct Question {
 	int correctAnswer;
 	struct Question* next;
 };
-extern struct Question* getQuestions();
+struct QuestionSet {
+	struct Question* questions;
+	char* creator;
+	struct QuestionSet* next;
+};
+extern struct QuestionSet* getQuestions();

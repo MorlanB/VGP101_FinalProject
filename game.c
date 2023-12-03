@@ -125,7 +125,14 @@ void failQuestion(int guaranteedMoney) {
 	printLine();
 }
 
-void gameMain(struct Question* question) {
+void gameMain(struct QuestionSet* questionSets) {
+	// Select set
+	printSets(questionSets);
+	int setNum = getIntRange("Select a set (press 0 to quit)", 0, 2);
+	if (setNum == 0) return;
+	struct Question* question = selectSet(questionSets, setNum);
+	clearScreen();
+
 	// Initialize game
 	const int moneyPerRound[16] = { 0, 500, 1000, 2000, 3000, 5000, 7500, 10000, 15000, 25000, 50000, 75000, 150000, 250000, 500000, 1000000 };
 
