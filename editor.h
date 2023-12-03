@@ -1,2 +1,2 @@
 #pragma once
-extern void editorMain();
+extern void editorMain(struct Question* questions);

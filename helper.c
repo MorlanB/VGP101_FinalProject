@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 // User Input
 int getInt(char* prompt) {
@@ -26,12 +28,45 @@ void getString(char* prompt, char* str, int maxSize) {
     scanf_s(" %[^\n]s", str, maxSize);
 }
 
-int getChoices(char* title, char** choices, int choiceCount, char* prompt) {
-    printf("\n%s\n", title);
+void printLine() {
     printf("------------------------------\n");
-    for (int i = 0; i < choiceCount; i++) {
-        printf("%d: %s\n",i+1,choices[i]);
+}
+
+void clearScreen() {
+	system("cls");
+}
+
+void pause() {
+	system("pause");
+}
+
+void formatNumber(char* str, int num) {
+    if (num == 0) {
+        str[0] = '0';
+        str[1] = '\0';
+        return;
     }
-    printf("------------------------------\n");
-    return getIntRange(prompt, 1, choiceCount)-1;
+
+    int strIndex = 0;
+    int digitCount = 0;
+
+    // add commas
+    while (num > 0) {
+        if (digitCount++ == 3) {
+            str[strIndex++] = ',';
+            digitCount = 0;
+        }
+        else {
+            str[strIndex++] = (num % 10) + '0';
+            num /= 10;
+        }
+    }
+
+    // reverse string
+    for (int i = 0; i < strIndex / 2; i++) {
+        char temp = str[i];
+        str[i] = str[strIndex - i - 1];
+        str[strIndex - i - 1] = temp;
+    }
+    str[strIndex] = '\0';
 }
