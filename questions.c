@@ -55,7 +55,7 @@ struct Question* getQuestions() {
 			"12", "13", "14", "Undefined behavior",
 			"This incrementing question takes you on a wild ride through C code. Can you catch the final value of x?",
 		// Question 13
-		"Which of the following is not a valid way to declare a multidimensional array in C?",
+		"Which of the following is a valid way to declare a multidimensional array in C?",
 			"int matrix[3][3];", "int array[][] = {{1, 2}, {3, 4}};", "int grid[2, 2];", "int table[2][2] = {1, 2, 3, 4};",
 			"This question takes you on a multidimensional journey in C. Can you spot the invalid declaration?",
 		// Question 14
