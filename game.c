@@ -62,6 +62,7 @@ void askQuestion(struct Question* question, int questionNumber, int score, int h
 
 	// Print lifelines
 	printf("\nLifelines:\n");
+	printLine();
 	printf("5: 50/50 (%s)\n", hasLifeline[FIFTY_FIFTY] == 1 ? "Available" : "Used");
 	printf("6: Phone a Friend (%s)\n", hasLifeline[PHONE_A_FRIEND] == 1 ? "Available" : "Used");
 	printf("7: Ask the Audience (%s)\n", hasLifeline[ASK_THE_AUDIENCE] == 1 ? "Available" : "Used");
@@ -157,7 +158,7 @@ void gameMain(struct Question* question) {
 
 		// Use lifeline
 		if (hasLifeline[PHONE_A_FRIEND] == 2) {
-			printf("\nPHONE A FRIEND:\n%s\n", question->phoneAFriend);
+			printf("\nPhone a Friend:\n%s\n", question->phoneAFriend);
 			printLine();
 		}
 
