@@ -13,7 +13,7 @@ void title() {
 	printf("|        Who Wants to Be       |\n");
 	printf("|         A Millionaire        |\n");
 	printf("--------------------------------\n");
-	printf("Created by: Alex, Benjamin, Haoxi, Morlan, & Narda\n");
+	printf("Created by: Benjamin, Haoxi, Lucas, Morlan, & Narda\n");
 }
 
 void mainMenu(struct Question* questions) {
