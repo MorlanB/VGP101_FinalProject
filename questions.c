@@ -10,11 +10,11 @@ struct QuestionSet* benjaminSet() {
 		// Question 1
 		"In the base-10 (decimal) number system, how many digits are there?",
 			"10", "9", "8", "Infinite",
-			"Explore the fundamental properties of the decimal system. How many digits make up the base-10 number system?",
+			"Explore the fundamental properties of the decimal system.",
 		// Question 2
 		"What is the currency of Canada?",
 			"Canadian Dollar", "Euro", "Pound Sterling", "Yen",
-			"Explore global currencies. Can you identify the official currency of Canada?",
+			"Explore global currencies.",
 		// Question 3
 		"How many times can you subtract 10 from 100?",
 			"As many as you want", "Once", "5 times", "10 times",
@@ -50,19 +50,19 @@ struct QuestionSet* benjaminSet() {
 		// Question 11
 		"What's the output of the following C code: printf('%c', 'A' + 1);?",
 			"The character 'B'", "'A' + 1", "Compiler error", "66",
-			"This ASCII-centric question adds a numeric twist to character manipulation in C. Can you decipher the output?",
+			"This ASCII-centric question adds a numeric twist to character manipulation in C.",
 		// Question 12
 		"Consider the following C code: int x = 10; printf('%d', x++ + ++x); What's the value of x?",
 			"22", "13", "14", "Undefined behavior",
-			"This incrementing question takes you on a wild ride through C code. Can you catch the final value of x?",
+			"This incrementing question takes you on a wild ride through C code.",
 		// Question 13
 		"Which of the following is a valid way to declare a multidimensional array in C?",
 			"int matrix[3][3];", "int array[][] = {{1, 2}, {3, 4}};", "int grid[2, 2];", "int table[2][2] = {1, 2, 3, 4};",
-			"This question takes you on a multidimensional journey in C. Can you spot the invalid declaration?",
+			"This question takes you on a multidimensional journey in C.",
 		// Question 14
 		"Consider the following C code: int z = 3 << 2 + 1; What's the value of z?",
 			"24", "14", "10", "20",
-			"This bitwise question takes a left shift into a wacky numeric realm. Can you predict the result?",
+			"This bitwise question takes a left shift into a wacky numeric realm.",
 		// Question 15
 		"Why do C programmers prefer dark mode in their code editors?",
 			"Less eye strain during long coding sessions", "To hide bugs in the shadows", "It's more mysterious and dramatic", "For a secret underground coder society",
@@ -77,63 +77,63 @@ struct QuestionSet* lucasSet() {
 		// Question 1
 		"Which of these is a popular video-sharing app that was launched in 2016?",
 			"TikTok", "Snapchat", "Instagram", "YouTube",
-			"Explore the world of social media. Which app, launched in 2016, gained popularity for short-form videos?",
+			"Explore the world of social media.",
 		// Question 2
 		"Which of these countries is not part of the European Union as of 2023?",
 			"Norway", "France", "Germany", "Spain",
-			"Navigate through geopolitical knowledge. Can you identify the country that is not part of the European Union as of 2023?",
+			"Navigate through geopolitical knowledge.",
 		// Question 3
 		"Which of these actors played the role of Batman in the 2021 film The Batman?",
 			"Robert Pattinson", "Christian Bale", "Ben Affleck", "Michael Keaton",
-			"Dive into the world of superheroes. Who portrayed Batman in the 2021 film 'The Batman'?",
+			"Dive into the world of superheroes.",
 		// Question 4
 		"Which of these musical artists won the most Grammy Awards in 2022?",
 			"Beyoncé", "Billie Eilish", "Taylor Swift", "Harry Styles",
-			"Explore the world of music. Who secured the most Grammy Awards in the year 2022?",
+			"Explore the world of music.",
 		// Question 5
 		"Which of these is the name of the first human-made object to land on Mars in 1971?",
 			"Mars 2", "Viking 1", "Pathfinder", "Curiosity",
-			"Embark on a space exploration. What is the name of the first human-made object to land on Mars in 1971?",
+			"Embark on a space exploration.",
 		// Question 6
 		"Which of these is the capital city of Canada?",
 			"Ottawa", "Toronto", "Montreal", "Vancouver",
-			"Explore Canadian geography. Can you identify the capital city of Canada?",
+			"Explore Canadian geography.",
 		// Question 7
 		"Which of these is the title of the seventh and final book in the Harry Potter series by J.K. Rowling?",
 			"Harry Potter and the Deathly Hallows", "Harry Potter and the Order of the Phoenix", "Harry Potter and the Half-Blood Prince", "Harry Potter and the Cursed Child",
-			"Immerse yourself in the wizarding world. What is the title of the seventh and final book in the Harry Potter series?",
+			"Immerse yourself in the wizarding world.",
 		// Question 8
 		"Which of these is the name of the largest bone in the human body?",
 			"Femur", "Humerus", "Tibia", "Pelvis",
-			"Explore human anatomy. Can you identify the largest bone in the human body?",
+			"Explore human anatomy.",
 		// Question 9
 		"Which of these is the name of the ancient city that was destroyed by a volcanic eruption in 79 AD?",
 			"Pompeii", "Athens", "Rome", "Babylon",
-			"Step into ancient history. Which city faced destruction due to a volcanic eruption in 79 AD?",
+			"Step into ancient history.",
 		// Question 10
 		"Which of these is the name of the painting that Leonardo da Vinci worked on for over a decade and never finished?",
 			"The Battle of Anghiari", "Mona Lisa", "The Last Supper", "The Vitruvian Man",
-			"Explore the art of Leonardo da Vinci. Which painting remained unfinished after over a decade of work?",
+			"Explore the art of Leonardo da Vinci.",
 		// Question 11
 		"Which of these is the name of the branch of mathematics that deals with the properties and relationships of numbers, shapes, and space?",
 			"Geometry", "Algebra", "Calculus", "Statistics",
-			"Embark on a mathematical journey. Which branch of mathematics focuses on numbers, shapes, and space?",
+			"Embark on a mathematical journey.",
 		// Question 12
 		"Which of these is the name of the first woman to win the Nobel Prize in Physics in 1903?",
 			"Marie Curie", "Lise Meitner", "Rosalind Franklin", "Ada Lovelace",
-			"Explore Nobel laureates. Who was the first woman to win the Nobel Prize in Physics in 1903?",
+			"Explore Nobel laureates.",
 		// Question 13
 		"Which of these is the name of the longest river in the world by total length?",
 			"Amazon", "Nile", "Yangtze", "Mississippi",
-			"Navigate through geography. What is the name of the longest river in the world by total length?",
+			"Navigate through geography.",
 		// Question 14
 		"Which of these is the name of the war that lasted from 1618 to 1648 and involved most of the European countries at the time?",
 			"The Thirty Years’ War", "The Hundred Years’ War", "The Napoleonic Wars", "The World War I",
-			"Step into historical conflicts. What is the name of the war that lasted from 1618 to 1648, involving most European countries?",
+			"Step into historical conflicts.",
 		// Question 15
 		"Which of these is the name of the chemical element with the highest atomic number that has been officially named and confirmed by the International Union of Pure and Applied Chemistry (IUPAC)?",
 			"Oganesson", "Tennessine", "Livermorium", "Ununennium",
-			"Dive into the periodic table. What is the name of the chemical element with the highest confirmed atomic number?",
+			"Dive into the periodic table.",
 	};
 
 	return convertToLinkedList(questionsAndAnswers, "Lucas");
