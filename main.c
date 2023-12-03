@@ -25,7 +25,7 @@ struct Question* selectQuestionSet(struct QuestionSet* questionSets) {
 	int totalSets = 0;
 	struct QuestionSet* current = questionSets;
 	while(current != NULL) {
-		printf("%d: %s\n", ++totalSets, current->creator);
+		printf("%d: %s's set\n", ++totalSets, current->creator);
 		current = current->next;
 	}
 	printLine();
@@ -34,10 +34,6 @@ struct Question* selectQuestionSet(struct QuestionSet* questionSets) {
 	int setNum = getIntRange("Select a set (press 0 to return to menu)", 0, totalSets);
 	if (setNum == 0) return NULL;
 	for(int i = 1; i < setNum; i++) {
-		if (questionSets == NULL) {
-			// This should never happen, but just in case
-			break;
-		}
 		questionSets = questionSets->next;
 	}
 	clearScreen();
