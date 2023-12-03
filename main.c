@@ -52,9 +52,9 @@ void mainMenu(struct QuestionSet* questionSets) {
 		printLine();
 		int menuChoice = getIntRange("Select a mode (press 0 to quit)", 0, 2);
 
-		clearScreen();
 		if (menuChoice == 0) {
 			// We're done here
+			clearScreen();
 			printLine();
 			printf("Thank you for playing!\n");
 			printLine();
