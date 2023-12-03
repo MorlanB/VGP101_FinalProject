@@ -6,7 +6,10 @@
 int getInt(char* prompt) {
     int num;
     printf("%s: ", prompt);
-    scanf_s("%d", &num);
+    while (scanf_s("%d", &num) != 1) {
+        while (getchar() != '\n');
+        printf("Error: Invalid input\n%s: ", prompt);
+    }
     return num;
 }
 
