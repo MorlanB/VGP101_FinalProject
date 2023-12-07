@@ -8,7 +8,7 @@
 #define ASK_THE_AUDIENCE 2
 
 void shuffleChoices(struct Question* question) {
-	for (int i = 0; i < 1; i++) {
+	for (int i = 0; i < 4; i++) {
 		int randomIndex = rand() % 4;
 		char* temp = question->choices[i];
 		question->choices[i] = question->choices[randomIndex];
@@ -31,6 +31,9 @@ void setAudienceVotes(int audienceVotes[], int correctAnswer) {
 			if (i != correctAnswer) audienceVotes[i] -= 50;
 		}
 		totalVotes += audienceVotes[i];
+	}
+	for (int i = 0; i < 4; i++) {
+		audienceVotes[i] = (audienceVotes[i] * 100) / totalVotes;
 	}
 }
 
@@ -200,7 +203,6 @@ void gameMain(struct Question* question) {
 			failQuestion(moneyPerRound[(questionNumber / 5) * 5]);
 			break;
 		}
-		clearScreen();
 	}
 	pause();
 }
