@@ -141,7 +141,6 @@ void gameMain(struct Question* question) {
 	int wrongAnswerToKeep = 0;
 
 	// More variables
-	int guaranteedMoney = 0;
 	int questionNumber = 0;
 
 	// Start game loop
@@ -183,8 +182,6 @@ void gameMain(struct Question* question) {
 				break;
 			}
 			else {
-				if (questionNumber % 5 == 4) guaranteedMoney = moneyPerRound[questionNumber + 1];
-
 				// Print score
 				correctQuestion(moneyPerRound[questionNumber + 1]);
 
@@ -200,7 +197,7 @@ void gameMain(struct Question* question) {
 		}
 		else {
 			// Wrong
-			failQuestion(guaranteedMoney);
+			failQuestion(moneyPerRound[(questionNumber / 5) * 5]);
 			break;
 		}
 		clearScreen();
