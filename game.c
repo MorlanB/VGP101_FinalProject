@@ -203,6 +203,7 @@ void gameMain(struct Question* question) {
 			failQuestion(moneyPerRound[(questionNumber / 5) * 5]);
 			break;
 		}
+		clearScreen();
 	}
 	pause();
 }
