@@ -48,7 +48,7 @@ void askQuestion(struct Question* question, int questionNumber, int score, int h
 	printLine();
 
 	// Print questions and choices
-	printf("\n%s\n", question->question);
+	printf("%s\n", question->question);
 	printLine();
 	for (int i = 0; i < 4; i++) {
 		if (hasLifeline[FIFTY_FIFTY] == 2 && i != question->correctAnswer && i != wrongAnswerToKeep) {

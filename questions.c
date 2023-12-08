@@ -139,6 +139,73 @@ struct QuestionSet* lucasSet() {
 	return convertToLinkedList(questionsAndAnswers, "Lucas");
 }
 
+struct QuestionSet* haoxiSet() {
+	char* questionsAndAnswers[15 * 6] = {
+		// Question 1
+		"Nintendo released the NES (Nintendo Entertainment System) in 1985, what was the name of this game console in Japan?",
+		"Family Computer", "Game & Watch", "Master System", "Super Nintendo",
+		"It seems like a very common name.",
+		// Question 2
+		"What was Nintendo's first game console?",
+		"Color TV-Game", "Game & Watch", "Family Computer (Nintendo Entertainment System)", "Atari 2600",
+		"The most famous are often not first.",
+		// Question 3
+		"How many total video game generations are there as of 2023?",
+		"9", "10", "8", "11",
+		"Video game generations are primairly divided based on the progression of consoles.",
+		// Question 4
+		"What is the best selling video game?",
+		"Minecraft", "Grand Theft Auto V", "Tetris", "Super Mario",
+		"Not an old game!",
+		// Question 5
+		"What was the TGA Game of the Year in 2014?",
+		"Dragon Age: Inquistion", "Dark Souls II", "Middle-earth: Shadow of Mordor", "Hearthstone",
+		"It's a RPG game.",
+		// Question 6
+		"Which of the following war had the highest number of casualties?",
+		"Vientnam War", "Korean War", "Yugoslav Wars", "Soviet-Afghan War",
+		"It's an American-led war.",
+		// Question 7
+		"How many dynasties were there in China from 1279-1912?",
+		"3", "1", "5", "4",
+		"A number that is no more and no less.",
+		// Question 8
+		"How many voyages to the Americans did Columbus make in total?",
+		"4", "3", "2", "1",
+		"More then you think.",
+		// Question 9
+		"Which of the following plants were not part of the Columbian exchange (from the New World to the Old World)?",
+		"Sugarcane", "Cactus", "Potato", "Maize",
+		"A plant that can be used as a sugar source.",
+		// Question 10
+		"What was published at the 20th Congress of the Communist Party of the Soviet Union that made its worldwide impact?",
+		"Secret Speeech", "Peaceful coexistence", "CCCP completes the full constuction of communism", "Sino-Soviet spilt",
+		"It was an event related to Stalin.",
+		// Question 11
+		"What was the first human satelite?",
+		"Sputnik 1", "Explorer 1", "Dong Fang Hong 1", "Vostok 1",
+		"It's a Soviet satelite.",
+		// Question 12
+		"What year was the last human landing mission to the Moon?",
+		"1972", "1967", "1969", "1980",
+		"Only a few years separated the first and last human landings on the Moon.",
+		// Question 13
+		"What was the name of the helicopter that humans sent to Mars?",
+		"Ingenuity", "Perseverance", "Zhurong", "Curiosity",
+		"Another name for this helicopter is Ginny.",
+		// Question 14
+		"In which years did mankind achieve the first recoverable rocket?",
+		"2015", "2016", "2012", "2018",
+		"SpaceX's Falcon 9.",
+		// Question 15
+		"Which of the follwing satellites is farthest from Earth?",
+		"Voyager 1", "Voyager 2", "Juno", "Cassini-Huygens",
+		"The earlist launches naturally have the longest range.",
+	};
+
+	return convertToLinkedList(questionsAndAnswers, "Haoxi");
+}
+
 struct QuestionSet* convertToLinkedList(char* questionsAndAnswers[], char* name) {
 	struct QuestionSet* set = (struct QuestionSet*)malloc(sizeof(struct QuestionSet));
 	set->creator = name;
@@ -167,6 +234,7 @@ struct QuestionSet* getQuestions() {
 	struct QuestionSet* sets[] = {
 		benjaminSet(),
 		lucasSet(),
+		haoxiSet(),
 	};
 
 	struct QuestionSet* head = sets[0];
