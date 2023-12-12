@@ -88,7 +88,7 @@ struct QuestionSet* lucasSet() {
 			"Dive into the world of superheroes.",
 		// Question 4
 		"Which of these musical artists won the most Grammy Awards in 2022?",
-			"Beyoncé", "Billie Eilish", "Taylor Swift", "Harry Styles",
+			"BeyoncÃ©", "Billie Eilish", "Taylor Swift", "Harry Styles",
 			"Explore the world of music.",
 		// Question 5
 		"Which of these is the name of the first human-made object to land on Mars in 1971?",
@@ -128,7 +128,7 @@ struct QuestionSet* lucasSet() {
 			"Navigate through geography.",
 		// Question 14
 		"Which of these is the name of the war that lasted from 1618 to 1648 and involved most of the European countries at the time?",
-			"The Thirty Years’ War", "The Hundred Years’ War", "The Napoleonic Wars", "The World War I",
+			"The Thirty Yearsâ€™ War", "The Hundred Yearsâ€™ War", "The Napoleonic Wars", "The World War I",
 			"Step into historical conflicts.",
 		// Question 15
 		"Which of these is the name of the chemical element with the highest atomic number that has been officially named and confirmed by the International Union of Pure and Applied Chemistry (IUPAC)?",
@@ -205,6 +205,72 @@ struct QuestionSet* haoxiSet() {
 
 	return convertToLinkedList(questionsAndAnswers, "Haoxi");
 }
+struct QuestionSet* nardaSet() {
+	char* questionsAndAnswers[15 * 6] = {
+		// Question 1
+		"What experiment number is Stich?",
+		"626", "326", "676", "888",
+		"-",
+		// Question 2
+		"In which movie does the villain named Clayton Appear?",
+		"Tarzan", "Atlantis", "Pocahontas", "Coco",
+		"He is a jungle man",
+		// Question 3
+		"Where does Marlin go to find his son Nemo?",
+		"Sydney", "Atlanta", "California", "Mexico",
+		"Observatory Hill Park",
+		// Question 4
+		"Which princess is Pascal friend?",
+		"Rapunzel", "Tiana", "Moana","Elsa",
+		"Long hair",
+		// Question 5
+		"What kind of fairy is Tinker Bell?",
+		"Tinker Talent", "Garden Talent", "Animal Talent", "Water Faires",
+		"They invent and create special tools to help the fairies.",
+		// Question 6
+		"What is the name of Ariels daughter",
+		"Melody", "Wendy", "Alondra", "Ana",
+		"Sound like a song",
+		// Question 7
+		"What is the name of the villain in the Little Mermaid movie?",
+		"Ursula", "Cruella de Vil", "Maleficent", "Jafar",
+		"Looks like an octopus",
+		// Question 8
+		"Which Disney character has a magic lamp and a genie?",
+		"Aladdin", "Jafar", "Abu", "Ursula",
+		"Use a magic carpet and have a monkey as a friend",
+		// Question 9
+		"What is the name of Pinocchio's best friend?",
+		"Cricket", "Pascal", "Sebastian", "Flounder",
+		"A small animal and it makes sound at night",
+		// Question 10
+		"What is the name of the mouse enemy in the Cinderella story?",
+		"Lucifer", "Scar", "Timon", "Buster",
+		"It is a cat with a creepy name",
+		// Question 11
+		"What princess lives under the sea ?",
+		"Ariel", "Cinderella", "Elsa", "Rapunzel",
+		"Is the daughter of King Triton",
+		// Question 12
+		"What is the name of Jacks dog? ",
+		"Zero", "Sparky", "Scraps", "Gus",
+		"Is a numerical quantity",
+		// Question 13
+		"How many brothers does Merida have ? ",
+		"3", "2", "4", "1",
+		"More then you think",
+		// Question 14
+		"What is the name of the villain of Hercules?",
+		"Hades", "Jafar", "Gantu", "Sid",
+		"Is the brother of Zeus",
+		// Question 15
+		"What is the indentity of Darth Vader?",
+		"Anakin Skywalker", "Rey Skywalker", "Obi Wan Kenobi", "Luke Skywalker",
+		"He was the child prodify",
+	};
+
+	return convertToLinkedList(questionsAndAnswers, "Narda");
+}
 
 struct QuestionSet* convertToLinkedList(char* questionsAndAnswers[], char* name) {
 	struct QuestionSet* set = (struct QuestionSet*)malloc(sizeof(struct QuestionSet));
@@ -235,6 +301,7 @@ struct QuestionSet* getQuestions() {
 		benjaminSet(),
 		lucasSet(),
 		haoxiSet(),
+		nardaSet(),
 	};
 
 	struct QuestionSet* head = sets[0];
