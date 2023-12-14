@@ -272,6 +272,118 @@ struct QuestionSet* nardaSet() {
 	return convertToLinkedList(questionsAndAnswers, "Narda");
 }
 
+struct QuestionSet* pukiNoBubuSet() {
+	char* questionsAndAnswers[15 * 6] = {
+		// Question 1
+		"What would be the correct code for the function CancelFallVelocity()?",
+			"player.AddForce(new Vector2(0, -player.rigidbody.velocity.y));",
+			"player.AddForce(new Vector2(0, player.rigidbody.velocity.y));",
+			"player.AddForce(new Vector2(-player.rigidbody.velocity.x, 0));",
+			"player.AddForce(new Vector2(player.rigidbody.velocity.x, 0));",
+			"It is the difference in their positions.",
+		//Question 2
+		"How would we make the player invulnerable for 1 second?",
+			"player.isVulnerable = false; while (time < 1) return null; player.isVulnerable = true;",
+			"player.isVulnerable = true; while (time < 1) return null; player.isVulnerable = false;",
+			"player.isVulnerable = false; while (time > 1) return null; player.isVulnerable = true;",
+			"player.isVulnerable = true; while (time > 1) return null; player.isVulnerable = false;",
+			"First we need to make it not be vulnerable, then wait to revert it.",
+		//Question 3
+		"How can we make objA look at objB?",
+			"objA.rotation = Quaternion.LookRotation(objB.position - objA.position);",
+			"objA.rotation = Quaternion.LookRotation(objA.position - objB.position);",
+			"objA.rotation += Quaternion.LookRotation(objA.position - objB.position);",
+			"objB.rotation -= Quaternion.LookRotation(objB.position + objA.position);",
+			"It is the direction resulting from the difference in their positions.",
+		//Question 4
+		"Which of the following is true?",
+			"if (true == false || (false != true && (true || false)))",
+			"if (true == false || (false != true && false || !true))",
+			"if (true == true && (false != true && false))",
+			"if (true != false && (false != true && !true))",
+			"We saw that in math, you should know...",
+		//Question 5
+		"If the class Soldier inherits from the class Enemy...",
+			"We can access soldier.health as long as Enemy has a protected 'health' variable.",
+			"We can access soldier.health as long as Enemy has a private 'health' variable.",
+			"We can access enemy.health as long as Soldier has a public 'health' variable.",
+			"We can access enemy.health as long as Soldier has a protected 'health' variable.",
+			"A child has the variables of the parent, but not the other way around.",
+		//Question 6
+		"What is the correct code to make an object rotate toward the player's position?",
+			"transform.LookAt(player.transform.position);",
+			"transform.Rotate(player.transform.position - transform.position);",
+			"transform.RotateAround(player.transform.position, Vector3.up, 180f);",
+			"transform.Rotate(Vector3.up * 180f);",
+			"LookAt() is a function that makes an object look at the given position.",
+		//Question 7
+		"How can you pause the game in Unity?",
+			"Time.timeScale = 0f;",
+			"gamePaused = true;",
+			"gameObject.SetActive(false);",
+			"Pause();",
+			"Time.timeScale is a variable that controls the speed of the game.",
+		//Question 8
+		"Which statement calls Attack() on an instance enemy of type Enemy?",
+			"enemy.Attack();",
+			"Enemy.Attack();",
+			"Attack(enemy);",
+			"Enemy(enemy).Attack();",
+			"instanceName.FunctionName();",
+		//Question 9
+		"In C#, how would we declare 'name' if we don't want to change it after assigning its value?",
+			"const string name;",
+			"readonly string name;",
+			"mutable string name;",
+			"static string name;",
+			"Please, it's in the question",
+		//Question 10
+		"In C#, what is the term for a piece of code that is executed when a specific condition is met?",
+			"Event",
+			"Method",
+			"Delegate",
+			"Callback",
+			"Idk",
+		//Question 11
+		"In C#, how should we create a new instance of a class or structure?",
+			"new Weapon();",
+			"class Weapon(weapon);",
+			"instance.Weapon;",
+			"create(Weapon);",
+			"Idk",
+		//Question 12
+		"Which of these is a regex to validate an email address?",
+			"(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|""(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*"")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])",
+			"validateEmail(134.255.55.59.111.67.12.162.16.152.149.242);",
+			"IsEmailAdress(userInput);",
+			"emailAdress.Validate();",
+			"Uhhhh wth is even that??",
+		//Question 13
+		"What git command do you probably not want to use if it's your first day as an intern?",
+			"git push --all",
+			"git pull origin main",
+			"git clone <repository-url>",
+			"git status",
+			"Pushing all your code to the main branch is a big no-no.",
+		//Question 14
+		"In a Python script, what library should we use to read a CSV file?",
+			"pandas",
+			"beautiful soup",
+			"pillow",
+			"django",
+			"Idk, but those are some p random names",
+		//Question 15
+		"What is the internal codename for Android 15?",
+			"Vanilla Ice Cream",
+			"Upside Down Cake",
+			"New York Cheesecake",
+			"Ice Cream Sandwich",
+			"I am hungry now"
+	};
+
+	return convertToLinkedList(questionsAndAnswers, "Morlan");
+}
+
 struct QuestionSet* convertToLinkedList(char* questionsAndAnswers[], char* name) {
 	struct QuestionSet* set = (struct QuestionSet*)malloc(sizeof(struct QuestionSet));
 	set->creator = name;
@@ -302,6 +414,7 @@ struct QuestionSet* getQuestions() {
 		lucasSet(),
 		haoxiSet(),
 		nardaSet(),
+		pukiNoBubuSet()
 	};
 
 	struct QuestionSet* head = sets[0];
