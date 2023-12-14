@@ -41,7 +41,8 @@ struct Question* selectQuestionSet(struct QuestionSet* questionSets) {
 	return questionSets->questions;
 }
 
-void mainMenu(struct QuestionSet* questionSets) {
+void mainMenu() {
+	struct QuestionSet* questionSets = getQuestions();
 	while (1) {
 		clearScreen();
 		title();
@@ -72,6 +73,6 @@ void mainMenu(struct QuestionSet* questionSets) {
 
 int main() {
 	srand((unsigned int) time(NULL));
-	mainMenu(getQuestions());
+	mainMenu();
 	return 0;
 }
