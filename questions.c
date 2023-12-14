@@ -272,7 +272,7 @@ struct QuestionSet* nardaSet() {
 	return convertToLinkedList(questionsAndAnswers, "Narda");
 }
 
-struct QuestionSet* pukiNoBubuSet() {
+struct QuestionSet* morlanSet() {
 	char* questionsAndAnswers[15 * 6] = {
 		// Question 1
 		"What would be the correct code for the function CancelFallVelocity()?",
@@ -414,7 +414,7 @@ struct QuestionSet* getQuestions() {
 		lucasSet(),
 		haoxiSet(),
 		nardaSet(),
-		pukiNoBubuSet()
+		morlanSet()
 	};
 
 	struct QuestionSet* head = sets[0];
